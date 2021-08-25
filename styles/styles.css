@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway";
+  font-size: 18px;
+}
+h2 {
+  color: rgba(219, 46, 46, 0.966);
+  text-align: center;
+}
+h5{
+  color: rgb(127, 148, 148);
+  text-align: center;
+  position: relative;
+  top: -20px;
+}
+nav {
+  display: flex;
+  background: linear-gradient(rgba(0, 245, 12, 0.425), rgb(0, 0, 0)), url("https://previews.123rf.com/images/marilyna/marilyna1910/marilyna191000029/131302502-vegan-health-food-background-border-with-a-large-collection-of-foods-high-in-protein-vitamins-minera.jpg");
+  border-radius: 4px;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid rgba(138, 64, 64, 0.562);
+  text-transform: uppercase;
+}
+nav span{
+  text-transform: none;
+}
+nav img {
+  height: 128%;
+  position: relative;
+  bottom: 9px;
+  left: 10px;
+  border-radius: 8%;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+nav li {
+  list-style-type: none;
+  margin-left: 50px;
+}
+.order {
+  color: rgb(88, 177, 218);
+  background-color: rgba(30, 0, 139, 0.75);
+  border-radius: 30px;
+  padding: 10px;
+}
+nav a {
+  font-weight: 300;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+a:hover {
+  color: rgba(219, 46, 46, 0.966);
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background: linear-gradient(rgba(0, 245, 12, 0.425), rgb(0, 0, 0)), url("https://previews.123rf.com/images/marilyna/marilyna1910/marilyna191000029/131302502-vegan-health-food-background-border-with-a-large-collection-of-foods-high-in-protein-vitamins-minera.jpg");;
+  min-width: 180px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.categ:hover{
+  cursor: none;
+}
+.dropdown-content a{
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+.dropdown-content a:hover {
+  color: rgba(219, 46, 46, 0.966);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content form{
+  text-align: center;
+}
+.logout{
+  border: none;
+  text-transform: uppercase;
+  background: none;
+  margin-top: 10px;
+  color: rgb(172, 229, 255);
+  font-size: inherit;
+  text-align: center;
+}
+.logout:hover{
+  color: rgba(219, 46, 46, 0.966);
+}
+table, th, td{
+  border: 1px grey solid;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td{
+  padding: 10px;
+  text-align: center;
+}
+th{
+  height: 2em;
+}
+
+/* index page */
+.welcome{
+  background: linear-gradient(rgba(255, 255, 0, 0.6), rgba(66, 66, 1, 0.6)), url("https://cdn-img.health.com/sites/default/files/styles/master_4_3/public/styles/main/public/sb10066792a-001.jpg?itok=Zl-O6qIU");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 350px;
+  text-align: center;
+}
+.welcome h1{
+  top: 45px;
+  position: relative;
+  font-size: 3.5em;
+  color: rgb(67, 68, 25);
+}
+.welcome p{
+  font-size: 26px;
+}
+.welcome a{
+  position: relative;
+  top: 70px;
+  text-decoration: none;
+}
+
+main {
+  max-width: 100%;
+  width: 1200px;
+  margin: 20px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+.benefits ul{
+  display: flex;
+  column-gap: 100px;
+}
+.benefits li{
+  list-style-type: none;
+}
+article p::first-line {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+article p::first-letter {
+  font-size: 2em;
+}
+.features li{
+  list-style-type: none;
+}
+.features li::before{
+  content: '✓';
+  color: rgba(219, 46, 46, 0.966);
+}
+.testimonials ul{
+  display: flex;
+  justify-content: space-around;
+  column-gap: 100px;
+}
+.testimonials li{
+  list-style-type: none;
+  position: relative;
+  text-align: center;
+  background: linear-gradient(rgba(128, 219, 247, 0.5), rgba(143, 143, 14, 0.5));
+  box-shadow: 10px 10px 5px grey;
+  border-radius: 7px;
+  padding-top: 10px;
+}
+.testimonials li:hover{
+  top: -4px;
+  background: linear-gradient(rgba(143, 143, 14, 0.5), rgba(128, 219, 247, 0.5));
+}
+.testimonials blockquote{
+  text-align: left;
+  font-style: italic;
+  color: rgb(80, 80, 80);
+}
+.testimonials span{
+  color: rgb(127, 148, 148);
+  padding-left: 30px;
+}
+.testimonials img{
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.testimonials blockquote:before { 
+  content: open-quote;
+  font-weight: bold;
+  font-size:23px;
+  color:rgb(127, 148, 148);
+} 
+.testimonials blockquote:after { 
+  content: close-quote;
+  font-weight: bold;
+  font-size:23px;
+  color:rgb(127, 148, 148);
+}
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 1px;
+  background: linear-gradient(rgba(0, 245, 12, 0.425), rgb(0, 0, 0)), url("https://previews.123rf.com/images/marilyna/marilyna1910/marilyna191000029/131302502-vegan-health-food-background-border-with-a-large-collection-of-foods-high-in-protein-vitamins-minera.jpg");
+  border-radius: 4px;
+  color: white;
+}
+.socials a{
+  padding-right: 20px;
+  padding-left: 20px;
+  position: relative;
+  opacity: 0.8;
+}
+.socials a:hover{
+  top: -5px;
+  opacity: 1;
+}
+.socials img{
+  object-fit: cover;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.last{
+  padding-left: 50px;
+}
+.last img{
+  height: 7%;
+  position: relative;
+  right: 100px;
+  bottom: 50px;
+}
+/* End of home page */
+
+/* login and register page and edit profile page*/
+.login-form, .register-form, .feedback-form, .location-form, .add-items-form, .password-form, .profile-form{
+  text-align: center;
+  padding-right: 120px;
+}
+label{
+  padding-right: 26px;
+}
+input, select, textarea{
+  font-size: 18px;
+  border-radius: 3px;
+  border: 1px grey solid;
+  padding: 5px 5px 5px 5px;
+}
+input{
+  width: 300px;
+}
+textarea{
+  resize: none;
+  box-sizing: border-box;
+  width: 300px;
+}
+input:hover, textarea:hover{
+  border-color: rgba(219, 46, 46, 0.966);
+}
+button{
+  width: 100px;
+  font-size: 18px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.action-btn{
+  margin-left: 120px;
+  width: fit-content;
+  border: none;
+  border-radius: 10vh;
+  background-color: rgba(219, 46, 46, 0.966);
+  padding: 10px 10px 10px 10px;
+}
+button:hover{
+  color: white;
+}
+
+/* Login page only */
+.login-form #pass{
+  margin-left: 0.4em;
+}
+.hyper:visited{
+  color: blue;
+}
+.after-login-form{
+  text-align: center;
+}
+.after-login-form a{
+  text-decoration: none;
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+/* Register page only */
+#fname, #lname{
+  margin-left: 2em;
+}
+#emailadd{
+  margin-left: 4em;
+}
+.register-form #pass{
+  margin-left: 2.5em;
+}
+.register-form #conf-pass{
+  margin-right: 1.4em;
+}
+.gen-div{
+  margin-right: 12em;
+}
+#gender{
+  margin-left: 4em;
+}
+.register-form #uname{
+  margin-left: 2.1em;
+}
+#dob{
+  margin-left: 1.4em;
+}
+#u-type{
+  margin-left: 3.4em;
+}
+
+/* edit password page */
+#new-pass{
+  margin-left: 2em;
+}
+#conf-new-pass{
+  margin-left: 0.5em;
+}
+.password-form #pass{
+  margin-left: 2.2em;
+}
+
+/* view items page */
+.items-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 10px 10px 10px 10px;
+}
+.item{
+  position: relative;
+  background-color: rgba(235, 228, 228, 0.616);
+  padding: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: 500ms;
+}
+.item:hover{
+  top: -5px;
+  background: orange;
+}
+.poster img{
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  border-radius: 5px;
+}
+.info{
+  line-height: 5px;
+}
+.info h4{
+  font-size: 1em;
+}
+.info a{
+  text-decoration: none;
+}
+#quantity{
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px grey solid;
+  padding: 3px 3px 3px 3px;
+}
+.info span{
+  padding-left: 30px;
+  font-size: 0.75em;
+  color: rgb(146, 146, 146);
+}
+.add-to-cart{
+  background-color: rgba(219, 46, 46, 0.966);
+  width: 10em;
+}
+.add-to-cart:hover{
+  color: white;
+}
+/* give feedback page */
+#text-label-feedback{
+  position: relative;
+  bottom: 11em;
+}
+#title{
+  margin-left: 1.65em;
+}
+
+/* location page */
+label span{
+  color: rgba(219, 46, 46, 0.966);
+  font-size: 30px;
+}
+
+#text-label-location{
+  position: relative;
+  bottom: 5em;
+}
+#additional-info{
+  margin-left: 0.8em;
+}
+
+/* cart page */
+.remove-column, .update-column{
+  width: 0.1em;
+  border: none;
+}
+.remove, .update{
+  font-size: 0.7em;
+  color: white;
+  width: 4.6em;
+  border: none;
+  background-color: red;
+  
+}
+.remove:hover{
+  color: rgb(13, 121, 172);
+}
+.checkout, .deliver{
+  text-align: center;
+}
+.checkout span{
+  color: grey;
+}
+
+/* delivery page */
+.delivered-column{
+  border: none;
+  width: 3em;
+}
+.delivered-column input{
+  width: 1em;
+}
+.deliver{
+  margin-top: 1.4em;
+}
+.deliver button{
+  width: 10em;
+}
+
+/* admin view users page */
+td a{
+  text-decoration: none;
+}
+.update{
+  background-color: blue;
+}
+.update:hover{
+  color: red;
+}
+
+/* admin add items page */
+#item{
+  margin-left: 1.8em;
+}
+#price{
+  margin-left: 4.5em;
+}
+#food-img{
+  margin-left: 3.7em;
+}
+input[type="file"] {
+  border: none;
+}
+/* edit profile */
+input[readonly], select[readonly]{
+  color: grey;
+  border: none;
+}
+.profile-form #uname{
+  margin-left: 2.1em;
+}
