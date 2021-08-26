@@ -56,6 +56,7 @@
                         <a href='location.php'>Change delivery address</a>
                         <a href='give-feedback.php'>Give your feedback</a>
                         <a href='cart.php'>My Cart</a>
+                        <a href='orders.php'>My Orders</a>
                         <a href='mailto:support@fgf.com'>Contact Support</a>
                         <form action='../partials/nav.php' method='POST'>
                             <button type='submit' name='logout' class='logout'>Log Out</button>

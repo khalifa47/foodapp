@@ -35,4 +35,14 @@
             echo deleteData($sql_delete);
         }
     }
+    if(isset($_POST['remove-order'])){
+        $sql_delete = htmlspecialchars("DELETE FROM Orders WHERE orderID=" . $_POST["id_to_delete"]);
+        if(deleteData($sql_delete)){
+            echo "<script>alert('Order cancelled!'); document.location='../views/orders.php';</script>";
+        }
+        else{
+            echo deleteData($sql_delete);
+        }
+    }
+
 ?>
