@@ -104,6 +104,8 @@ table, th, td{
   border: 1px grey solid;
 }
 table{
+  border-bottom: none;
+  border-right: none;
   width: 100%;
   border-collapse: collapse;
 }

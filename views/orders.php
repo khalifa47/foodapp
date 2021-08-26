@@ -1,5 +1,4 @@
 <?php require_once("../processes/connect.php"); ?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,14 +9,14 @@
     <title>My orders</title>
 </head>
 <body>
-    <?php require("../partials/nav.php"); ?>
-    <?php require("../partials/verify.php"); ?>
+<?php require("../partials/nav.php"); ?>
+<?php require("../partials/verify.php"); ?>
 
-    <?php 
-    if(!isLogged()){
-        header("Location: login.php");
-    }
-    ?>
+<?php 
+if(!isLogged()){
+    header("Location: login.php");
+}
+?>
     <h2>My Orders</h2>
     <table>
         <tr>
@@ -41,7 +40,7 @@
             foreach($rows as $row){
                 echo "<tr>
                     <td>" . htmlspecialchars($row["orderID"]) . "</td>
-                    <td><img src='" . htmlspecialchars($row["img_address"]) . "' alt='item_img' style='object-fit: cover; height:5em; width:5em; border-radius: 50%;'><span>" . htmlspecialchars($row["itemname"]) . "</span></td>
+                    <td style='display:flex; justify-content: space-between;'><img src='" . htmlspecialchars($row["img_address"]) . "' alt='item_img' style='object-fit: cover; height:5em; width:5em; border-radius: 50%;'><span style='align-self: center; font-size: 1.2em;'>" . htmlspecialchars($row["itemname"]) . "</span></td>
                     <td>" . htmlspecialchars($row["quantity"]) . "</td>
                     <td>" . htmlspecialchars($row["total_price"]) . "</td>
                     <td>" . htmlspecialchars($row["order_date"]) . "</td>
