@@ -20,6 +20,9 @@ else{
     createDatabase();
     createCartTable();
 }
+if(isDelivery()){
+    header("Location: delivery-fulfilment.php");
+}
 
 ?>
 

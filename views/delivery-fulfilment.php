@@ -15,9 +15,12 @@
 
 
 <?php 
-// if(!isLogged()){
-//     header("Location: login.php");
-// }
+if(!isLogged()){
+    header("Location: login.php");
+}
+if(!isDelivery()){
+    header("Location: delivery-fulfilment.php");
+}
 ?>
 
     <h2>Deliveries for today</h2>

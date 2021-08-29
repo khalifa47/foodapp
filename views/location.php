@@ -16,6 +16,9 @@
 if(!isLogged()){
     header("Location: login.php");
 }
+if(isDelivery()){
+    header("Location: delivery-fulfilment.php");
+}
 createDatabase();
 createAddressTable();
 $sql_default_select = "SELECT addressLine1, addressLine2, additionalInfo FROM Addresses WHERE userID = " . $_SESSION['uid'];

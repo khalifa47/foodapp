@@ -11,7 +11,14 @@
 </head>
 
 <body>
-  <?php require("../partials/nav.php"); ?>
+  <?php 
+  require("../partials/nav.php"); 
+  require("../partials/verify.php");
+
+  if(isDelivery()){
+    header("Location: delivery-fulfilment.php");
+  }
+  ?>
 
   <h2>Items List</h2>
   <div class="items-container">

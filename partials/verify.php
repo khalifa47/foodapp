@@ -15,4 +15,12 @@ function isAdmin(){
         return FALSE;
     }
 }
+function isDelivery(){
+    if($_SESSION['utype'] === "Delivery"){
+        return TRUE;
+    }
+    else{
+        return FALSE;
+    }
+}
 ?>
