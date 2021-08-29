@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="icon" href="https://www.foodgloriousfoodsouth.co.uk/wp-content/uploads/2015/09/fgf-logo.png">
+    <script src="../script/sorting.js"></script>
     <title>Delivery</title>
 </head>
 <body>
@@ -24,15 +25,15 @@ if(!isDelivery()){
 ?>
 
     <h2>Deliveries for today</h2>
-        <table>
+        <table id="deliveries-table">
             <tr>
                 <th>Order ID</th>
-                <th>Buyer Name</th>
-                <th>Delivery address</th>
-                <th>Item Name</th>
+                <th class="sortable" onclick="sortTable('deliveries-table', 1)">Buyer Name</th>
+                <th class="sortable" onclick="sortTable('deliveries-table', 2)">Delivery address</th>
+                <th class="sortable" onclick="sortTable('deliveries-table', 3)">Item Name</th>
                 <th>Quantity</th>
                 <th>Total Price</th>
-                <th>Status</th>
+                <th class="sortable" onclick="sortTable('deliveries-table', 6)">Status</th>
             </tr>
 
             <?php 

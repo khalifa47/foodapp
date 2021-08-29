@@ -494,3 +494,9 @@ input[readonly], select[readonly]{
 .profile-form #uname{
   margin-left: 2.1em;
 }
+
+/* sortable lists */
+.sortable:hover{
+  cursor: pointer;
+  color: maroon;
+}

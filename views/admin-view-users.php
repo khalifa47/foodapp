@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="icon" href="https://www.foodgloriousfoodsouth.co.uk/wp-content/uploads/2015/09/fgf-logo.png">
+  <script src="../script/sorting.js"></script>
   <title>View Users</title>
 </head>
 
@@ -24,16 +25,16 @@
     ?>
 
   <h2>Users List</h2>
-  <table>
+  <table id="users-table">
     <tr>
       <th>User ID</th>
-      <th>Name</th>
-      <th>E-mail address</th>
-      <th>Gender</th>
+      <th class="sortable" onclick="sortTable('users-table', 1)">Name</th>
+      <th class="sortable" onclick="sortTable('users-table', 2)">E-mail address</th>
+      <th class="sortable" onclick="sortTable('users-table', 3)">Gender</th>
       <th>Phone Number</th>
-      <th>Username</th>
+      <th class="sortable" onclick="sortTable('users-table', 5)">Username</th>
       <th>Date of Birth</th>
-      <th>User type</th>
+      <th class="sortable" onclick="sortTable('users-table', 7)">User type</th>
     </tr>
 
     <?php
