@@ -17,7 +17,7 @@
   if(!isLogged()){
       header("Location: login.php");
   }
-  $sql_default_select = "SELECT firstname, lastname, email, gender, phone, username, dob FROM Users WHERE Users.username = '" . $_SESSION['uname'] . "'";
+  $sql_default_select = "SELECT firstname, lastname, email, gender, phone, username, dob, user_type FROM Users WHERE Users.username = '" . $_SESSION['uname'] . "'";
   $defaults = getData($sql_default_select);
 ?>
 
@@ -58,7 +58,9 @@
             </div>
             <br>
 
-            <button type="submit" class="action-btn">Update</button>
+            <input type="hidden" name="u-type" value="<?php echo htmlspecialchars($defaults[0]['user_type'])?>">
+
+            <button type="submit" name="edit-user" class="action-btn">Update</button>
         </form>
       </div>
 
