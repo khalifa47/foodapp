@@ -12,9 +12,9 @@
 <?php require("../partials/verify.php"); ?>
 
 <?php 
-// if(!isLogged()){
-//     header("Location: login.php");
-// }
+if(!isLogged()){
+    header("Location: login.php");
+}
 ?>
 
     <h2>Feedback Form</h2>

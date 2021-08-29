@@ -1,3 +1,4 @@
+<?php require_once("../processes/connect.php"); ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,69 +11,72 @@
 <body>
 <?php require("../partials/nav.php"); ?>
 <?php require("../partials/verify.php"); ?>
+<?php require("../processes/time.php"); ?>
+
 
 <?php 
-if(!isLogged()){
-    header("Location: login.php");
-}
+// if(!isLogged()){
+//     header("Location: login.php");
+// }
 ?>
 
     <h2>Deliveries for today</h2>
-    <form action="">
         <table>
             <tr>
-                <th>Item ID</th>
+                <th>Order ID</th>
+                <th>Buyer Name</th>
+                <th>Delivery address</th>
                 <th>Item Name</th>
                 <th>Quantity</th>
-                <th>Buyer</th>
-                <th>Delivery address</th>
                 <th>Total Price</th>
+                <th>Status</th>
             </tr>
-            <tr>
-                <td>123</td>
-                <td>Apples</td>
-                <td>7</td>
-                <td>Khalifa Fumo</td>
-                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, corporis.</td>
-                <td>700</td>
-                <td class="delivered-column"><input type="checkbox" id="del123tokf" name="del123tokf"></td>
-            </tr>
-            <tr>
-                <td>234</td>
-                <td>Broccoli</td>
-                <td>8</td>
-                <td>James Kap</td>
-                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, corporis.</td>
-                <td>800</td>
-                <td class="delivered-column"><input type="checkbox" id="del234tojk" name="del234tojk"></td>
-            </tr>
-            <tr>
-                <td>345</td>
-                <td>Spinach</td>
-                <td>5</td>
-                <td>Pauline Lin</td>
-                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, corporis.</td>
-                <td>500</td>
-                <td class="delivered-column"><input type="checkbox" id="del345topl" name="del345topl"></td>
-            </tr>
-            <tr>
-                <td>456</td>
-                <td>Oranges</td>
-                <td>4</td>
-                <td>Jack Don</td>
-                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, corporis.</td>
-                <td>400</td>
-                <td class="delivered-column"><input type="checkbox" id="del456tojd" name="del456tojd"></td>
-            </tr>
-        </table>
-    
-        <div class="deliver">
-            <button type="submit">Confirm deliveries</button>
-        </div>
-    </form>
-    
 
-    
+            <?php 
+            $sql_select = "SELECT orders.orderID, orders.quantity, orders.total_price, orders.delivery_status, addresses.addressLine1, addresses.addressLine2, addresses.additionalInfo, items.itemname, users.firstname, users.lastname FROM orders 
+                            INNER JOIN items ON items.itemID = orders.itemID
+                            INNER JOIN users ON users.userID = orders.userID
+                            INNER JOIN addresses ON addresses.userID = orders.userID
+                            WHERE orders.order_date = '" . findDate() . "'";
+
+            if($rows = getData($sql_select)){
+                $totals = 0;
+                foreach($rows as $row){
+                    $totals += $row["total_price"];
+                    echo "<tr>
+                    <td>" . htmlspecialchars($row["orderID"]) . "</td>
+                    <td>" . htmlspecialchars($row["firstname"]) . " " . htmlspecialchars($row["lastname"]) . "</td>
+                    <td><p>" . htmlspecialchars($row["addressLine1"]) . "</p><p>" . htmlspecialchars($row["addressLine2"]) . "</p><p>" . htmlspecialchars($row["additionalInfo"]) . "</p></td>
+                    <td>" . htmlspecialchars($row["itemname"]) . "</td>
+                    <td>" . htmlspecialchars($row["quantity"]) . "</td>
+                    <td>" . $totals . "</td>
+
+                    <td class='update-status'>
+                        <form action='../processes/update.php' method='POST'>
+                            <input type='hidden' name='id-to-update' value='" . $row["orderID"] . "'>
+                            <select name='status' id='status' required>
+                                <option value='" . htmlspecialchars($row["delivery_status"]) . "' selected>" . htmlspecialchars($row["delivery_status"]) . "</option>
+                                <option value='Confirmed'>Confirmed</option>
+                                <option value='In transit'>In transit</option>
+                                <option value='Delivered'>Delivered</option>
+                                <option value='Failed'>Failed</option>
+                            </select>
+                            <button type='submit' class='update' name='deliveries-btn'>Update</button>
+                        </form>
+                    </td>
+
+                </tr>";
+                }
+            }
+            else if($GLOBALS['isEmpty']){
+                echo "<h2 style='color: rgba(30, 0, 139, 0.75);'>No deliveries for today!</h2>";
+            }
+            else{
+                echo getData($sql_select);
+            }
+            ?>
+        </table>
+
     <?php require("../partials/footer.php") ?>
     
 </body>

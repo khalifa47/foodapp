@@ -457,12 +457,10 @@ label span{
 .delivered-column input{
   width: 1em;
 }
-.deliver{
-  margin-top: 1.4em;
+#status{
+  font-size: 0.7em;
 }
-.deliver button{
-  width: 10em;
-}
+
 
 /* admin view users page */
 td a{

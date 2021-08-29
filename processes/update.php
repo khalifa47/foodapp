@@ -43,4 +43,16 @@
             }
         }
     }
+
+if(isset($_POST["deliveries-btn"])){
+    $STATUS = $_POST["status"];
+    $sql_update = "UPDATE orders SET delivery_status = '$STATUS' WHERE orderID = " . $_POST["id-to-update"];
+
+    if(setData($sql_update) === TRUE){
+        header("Location: ../views/delivery-fulfilment.php");
+    }
+    else{
+        echo setData($sql_update);
+    }
+}
 ?>

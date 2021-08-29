@@ -46,19 +46,22 @@ if(!isLogged()){
                     <td>" . htmlspecialchars($row["order_date"]) . "</td>
                     <td>" . htmlspecialchars($row["order_time"]) . "</td>
                     <td><p>" . htmlspecialchars($row["addressLine1"]) . "</p><p>" . htmlspecialchars($row["addressLine2"]) . "</p><p>" . htmlspecialchars($row["additionalInfo"]) . "</p></td>
-                    <td>" . htmlspecialchars($row["delivery_status"]) . "</td>
-                    <td class='remove-column'>
+                    <td>" . htmlspecialchars($row["delivery_status"]) . "</td>";
+
+                    if($row["delivery_status"] === "Confirmed"){
+                        echo "<td class='remove-column'>
                         <form action='../processes/remove.php' method='POST'>
                             <input type='hidden' name='id_to_delete' value=" . $row["orderID"] . ">
                             <button type='submit' name='remove-order' class='remove'>Cancel</button>
                         </form>
-                    </td>
+                    </td>";
+                    }
 
-                </tr>";
+                echo "</tr>";
                 $totalprice += $row["total_price"];
             }?>
         <div class="checkout">
-            <h3>Have Ksh. <span><?php echo $totalprice; ?></span> on delivery</h3>
+            <h3>Total: Ksh. <span><?php echo $totalprice; ?></span></h3>
         </div>
         <?php 
         }
