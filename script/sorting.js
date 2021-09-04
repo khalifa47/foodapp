@@ -1,13 +1,11 @@
 function sortTable(tab, n) {
     let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById(tab);
-    switching = true;
-    // Set the sorting direction to ascending:
-    dir = "asc";
-    /* Make a loop that will continue until
-    no switching has been done: */
+    switching = true; //to switch order
+    
+    dir = "asc"; // Set the sorting direction to ascending:
+
     while (switching) {
-        // Start by saying: no switching is done:
         switching = false;
         rows = table.rows;
         /* Loop through all table rows (except the

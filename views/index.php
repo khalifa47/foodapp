@@ -17,7 +17,24 @@
         Here at FGF we seek to satisfy your appetite and offer your favorite organic
         foods
       </p>
-      <a class="order" href="view-items.php">Order your food here</a>
+      <a class="order" href="view-items.php">
+        <?php
+        if(isset($_SESSION['utype'])){
+          if($_SESSION['utype'] === 'Admin' || $_SESSION['utype'] === 'SuperAdmin'){
+            echo "View items here";
+          }
+          else if($_SESSION['utype'] === 'Delivery'){
+            echo "View deliveries for today";
+          }
+          else{
+            echo "Order your food here";
+          }
+        }
+        else{
+          echo "Order your food here";
+        } 
+        ?>
+      </a>
     </div>
 
     <main>

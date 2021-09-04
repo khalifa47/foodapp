@@ -42,7 +42,7 @@
         </tr>
         <?php
         $totalprice = 0;
-        $sql_select = "SELECT orders.orderID, orders.userID, orders.quantity, orders.total_price, orders.order_date, orders.order_time, orders.delivery_status, addresses.addressLine1, addresses.addressLine2, addresses.additionalInfo, items.itemname, items.img_address FROM orders 
+        $sql_select = "SELECT orders.orderID, orders.userID, orders.quantity, orders.total_price, orders.order_date, orders.order_time, orders.delivery_status, addresses.addressLine1, addresses.addressLine2, addresses.additionalInfo, items.itemname, items.img_address, users.firstname, users.lastname FROM orders 
                         INNER JOIN items ON items.itemID = orders.itemID
                         INNER JOIN users ON users.userID = orders.userID
                         INNER JOIN addresses ON addresses.userID = orders.userID";
@@ -56,7 +56,7 @@
                     <td>" . htmlspecialchars($row["orderID"]) . "</td>
                     <td style='display:flex; justify-content: space-between;'><img src='" . htmlspecialchars($row["img_address"]) . "' alt='item_img' style='object-fit: cover; height:5em; width:5em; border-radius: 50%;'><span style='align-self: center; font-size: 1.2em;'>" . htmlspecialchars($row["itemname"]) . "</span></td>";
                 if (isAdmin()) {
-                    echo "<td>" . htmlspecialchars($row["userID"]) . "</td>";
+                    echo "<td><a class='disp_user' href='admin-view-users.php' title='" . htmlspecialchars($row["firstname"]) . " " . htmlspecialchars($row["lastname"]) . "'>" . htmlspecialchars($row["userID"]) . "</a></td>";
                 }
                 echo "<td>" . htmlspecialchars($row["quantity"]) . "</td>
                     <td>" . htmlspecialchars($row["total_price"]) . "</td>

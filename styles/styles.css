@@ -48,8 +48,9 @@ nav li {
 .order {
   color: rgb(88, 177, 218);
   background-color: rgba(30, 0, 139, 0.75);
-  border-radius: 30px;
+  border-radius: 5vh;
   padding: 10px;
+  font-size: 2em;
 }
 nav a {
   font-weight: 300;
@@ -499,4 +500,11 @@ input[readonly], select[readonly]{
 .sortable:hover{
   cursor: pointer;
   color: maroon;
+}
+/* orders */
+.disp_user{
+  text-decoration: none;
+}
+.disp_user:hover{
+  color: rgba(219, 46, 46, 0.966);
 }
