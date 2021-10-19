@@ -1,4 +1,5 @@
 # foodapp
+This is a simple food e-commerce site
 //An internet connection is required to run this project
 1. The home page is "views/index.php"
 2. Use the "views/register.php" page to register users. To register an admin or a delivery service use the "views/admin-add-users.php" page
