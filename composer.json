@@ -1,6 +1,5 @@
 {
   "name": "php/foodapp",
   "type": "project",
-  "description": "CodeIgniter4 starter app",
-  "homepage": "/views/index.php"
+  "description": "CodeIgniter4 starter app"
 }
