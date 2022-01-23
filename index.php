@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <?php require("/partials/nav.php"); ?>
+  <?php require("partials/nav.php"); ?>
 
   <div class="welcome">
     <h1>CURB YOUR APPETITE!</h1>
