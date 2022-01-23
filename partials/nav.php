@@ -93,6 +93,7 @@
                         <a href='admin-add-users.php'>Add users</a>
                         <a href='admin-view-users.php'>View Users</a>
                         <a href='admin-view-feedback.php'>View Feedback</a>
+                        <a href='admin-view-stats.php'>View Stats</a>
                         <a href='orders.php'>Orders</a>
                         <form action='../partials/nav.php' method='POST'>
                             <button type='submit' name='logout' class='logout'>Log Out</button>

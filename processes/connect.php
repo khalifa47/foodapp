@@ -6,6 +6,7 @@
         $dbuser = "root";
         $dbpass = "";
         $dbname = "foodapp";
+
     
         $conn = new mysqli($dbserver, $dbuser, $dbpass, $dbname);
         if($conn->connect_error){

@@ -45,12 +45,18 @@ nav li {
   list-style-type: none;
   margin-left: 50px;
 }
-.order {
+.order{
   color: rgb(88, 177, 218);
   background-color: rgba(30, 0, 139, 0.75);
   border-radius: 5vh;
   padding: 10px;
+}
+.order_call{
+  color: rgb(88, 177, 218);
+  background-color: rgba(30, 0, 139, 0.75);
+  border-radius: 5vh;
   font-size: 2em;
+  padding: 10px;
 }
 nav a {
   font-weight: 300;

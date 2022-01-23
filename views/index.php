@@ -17,7 +17,7 @@
         Here at FGF we seek to satisfy your appetite and offer your favorite organic
         foods
       </p>
-      <a class="order" href="view-items.php">
+      <a class="order_call" href="view-items.php">
         <?php
         if(isset($_SESSION['utype'])){
           if($_SESSION['utype'] === 'Admin' || $_SESSION['utype'] === 'SuperAdmin'){
@@ -44,31 +44,17 @@
             <li>
               <h2>Why use FGF?</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur ipsam placeat eos blanditiis, similique veniam illum
-                dolore odio exercitationem vero at aperiam excepturi et sunt
-                itaque voluptatibus doloremque repellendus corrupti nesciunt
-                laborum nihil nulla quaerat? Animi consectetur officia quasi
-                commodi recusandae itaque maxime nulla repudiandae
-                exercitationem placeat. Reiciendis rem quia sequi harum cumque
-                adipisci et nam ea voluptas repellendus minus voluptatem dolor
-                iusto dolorum, vero deleniti quisquam nostrum molestias quam
-                explicabo eligendi quidem non? Recusandae doloribus soluta
+                We deliver fresh produce from our suppliers to your doorstep. We also guarantee a delivery time of less than an hour wherever you are in the town through our multiple branches. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Our crops are grown and monitored using the latest and most efficient technologies to ensure the utmost quality for healthy living.
+                Shop with FGF and see your needs satisfied!
               </p>
             </li>
             <li>
-              <h2>A bunch of stuff about fruits.</h2>
+              <h2>Something about organic food.</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur ipsam placeat eos blanditiis, similique veniam illum
-                dolore odio exercitationem vero at aperiam excepturi et sunt
-                itaque voluptatibus doloremque repellendus corrupti nesciunt
-                laborum nihil nulla quaerat? Animi consectetur officia quasi
-                commodi recusandae itaque maxime nulla repudiandae
-                exercitationem placeat. Reiciendis rem quia sequi harum cumque
-                adipisci et nam ea voluptas repellendus minus voluptatem dolor
-                iusto dolorum, vero deleniti quisquam nostrum molestias quam
-                explicabo eligendi quidem non? Recusandae doloribus soluta
+                They say "an apple a day keeps the doctor away" for a reason. Fruits and vegetables are known for years to improve the health of those who take them.
+                Organic foods often have more beneficial nutrients, such as antioxidants, than their conventionally-grown counterparts and people with allergies to foods, chemicals, or preservatives may find their symptoms lessen or go away when they eat only organic foods.
+                
               </p>
             </li>
           </ul>
