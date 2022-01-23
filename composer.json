@@ -2,8 +2,5 @@
   "name": "php/foodapp",
   "type": "project",
   "description": "CodeIgniter4 starter app",
-  "homepage": "/views/index.php",
-  "require": {
-    "php": "^7.3 || ^8.0"
-  }
+  "homepage": "/views/index.php"
 }
